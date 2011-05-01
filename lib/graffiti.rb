@@ -1,0 +1,3 @@
+module Graffiti
+  # Your code goes here...
+end
