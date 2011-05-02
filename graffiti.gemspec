@@ -6,16 +6,19 @@ Gem::Specification.new do |s|
   s.name        = "graffiti"
   s.version     = Graffiti::VERSION
   s.platform    = Gem::Platform::RUBY
-  s.authors     = ["TODO: Write your name"]
-  s.email       = ["TODO: Write your email address"]
-  s.homepage    = ""
-  s.summary     = %q{TODO: Write a gem summary}
-  s.description = %q{TODO: Write a gem description}
+  s.authors     = ["Aaron Kalin"]
+  s.email       = ["akalin@martinisoftware.com"]
+  s.homepage    = "http://www.rubyexpressions.com/"
+  s.summary     = %q{Regular Expressions are an artform}
+  s.description = %q{Test your Regular Expressions locally}
 
   s.rubyforge_project = "graffiti"
+  s.add_development_dependency "rspec"
+
+  s.add_dependency "sinatra", "1.2.6"
 
   s.files         = `git ls-files`.split("\n")
-  s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
+  s.test_files    = `git ls-files -- {spec,features}/*`.split("\n")
   s.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
   s.require_paths = ["lib"]
 end
