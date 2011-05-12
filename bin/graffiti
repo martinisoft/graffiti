@@ -1,3 +1,10 @@
 #!/usr/bin/env ruby
 
-require "graffiti"
+begin
+  require "graffiti"
+rescue LoadError => e
+  $LOAD_PATH.unshift File.dirname(__FILE__) + '/../lib'
+  require "graffiti"
+end
+
+Graffiti::Server.start("0.0.0.0", 8080)

@@ -1,3 +1,5 @@
+require "graffiti/server"
+require "graffiti/version"
+
 module Graffiti
-  # Your code goes here...
 end
