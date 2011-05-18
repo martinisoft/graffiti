@@ -1,0 +1,38 @@
+!!!
+/[if IE 7 ] <html lang="en" class="no-js ie7">
+/[if IE 8 ] <html lang="en" class="no-js ie8">
+/[if IE 9 ] <html lang="en" class="no-js ie9">
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+%head
+  %meta{charset: "utf-8"}
+    %title Graffiti
+    %link{ :rel => "stylesheet", :href => "/graffiti.css" }
+    %script{ :type => "text/javascript", :src => "/jquery-1.6.1.min.js" }
+    :javascript
+      function check_regex() {
+        //$('#result').show();
+        var regexVal = $('#regex').val(),
+            subjectVal = $('#subject').val();
+        $.post("/regex", { regex : regexVal, subject : subjectVal },
+          function(data) {
+            $('#result').html(data);
+          }
+        );
+      }
+
+      $(document).ready(function() {
+        $("#regex").keyup(function(e){
+          e.preventDefault();
+          check_regex();
+        });
+      });
+%body
+  %header
+    %h1 Graffiti
+  %section#wrap.clearfix
+    %section#content.main
+      %form{ :action => "/regex", :id => "regex_form", :method => "post" }
+        %input#regex{ :name => "regex", :size => "80", :type => "text", :placeholder => "insert your regex here" }
+        %textarea#subject{ :name => "subject", :cols => "60", :rows => "10" }
+        #result
+
