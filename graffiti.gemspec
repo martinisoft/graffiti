@@ -15,6 +15,7 @@ Gem::Specification.new do |s|
   s.rubyforge_project = "graffiti"
   s.add_development_dependency "rspec", "2.6.0"
   s.add_development_dependency "aruba", "0.3.6"
+  s.add_development_dependency "shotgun", "0.9"
   s.add_development_dependency "capybara", "0.4.1.2"
   s.add_development_dependency "ruby-debug19"
 
