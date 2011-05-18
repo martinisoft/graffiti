@@ -4,30 +4,31 @@ Regular Expressions are an artform.
 
 ## TL; DR
 
-This app lets you test your Regular Expressions locally.
+This app lets you test your Regular Expressions locally on a web page.
 
 ## What the?
 
-I wanted to make a small project that used Ruby 1.9's [Oniguruma] regular
-expression engine.
+Regular Expressions are the universal search language that crosses
+all language boundries. Most text editors, modern languages and
+even web sites support Regular Expressions.  Graffiti is intended
+to be a teaching aid and utility to help developers master this
+artform.
 
 ## Install
 
-Ruby 1.9.2+ users can simply:
+Simply type:
 
 <pre><code>
 [sudo] gem install graffiti
 </code></pre>
 
-sudo is optional (and you shouldn't anyway)
-
-Sorry folks, Ruby 1.8.7 is not supported right now (patches are accepted!),
-but you can install the oniguruma gem if you want to mess with
-Regular Expressions using this engine.
+sudo is optional (and you shouldn't anyway, especially if you use RVM)
 
 ## Dependencies
 
-* Ruby 1.9.2-p0 or newer
+For advanced regex (Assertions, POSIX, etc) you'll need Ruby 1.9 or JRuby
+
+Advanced stuff on Rubinius/MRI 1.8.7 is coming in another version
 
 ## Usage
 
@@ -40,6 +41,12 @@ graffiti
 Then visit [http://localhost:8080/](http://localhost:8080/) and
 start messing with Regular Expressions.
 
+You can find some customization options by passing the -h option like so:
+
+<pre><code>
+graffiti -h
+</code></pre>
+
 ## Contribute
 
 I love the github pull request system and so will you when contributing!
@@ -51,3 +58,8 @@ I love the github pull request system and so will you when contributing!
 Simple! If you need stuff to work on, check the "Issues" section of the
 github repo.  If its a new feature, make it awesome and I'll gladly accept
 the patch.
+
+## Wish List
+
+I wanted to get this project out there and into everyone's hands
+so I get ideas on where to take this project.
