@@ -7,4 +7,15 @@ rescue LoadError => e
   require "graffiti"
 end
 
-Graffiti::Server.start("0.0.0.0", 8080)
+require 'trollop'
+
+opts = Trollop::options do
+  version "#{Graffiti::VERSION}"
+  banner <<-EOS
+  Graffiti is a local Regular Expressions testing system.
+  EOS
+
+  opt :port, "Port to bind to", :default => 8080
+end
+
+Graffiti::Server.start("0.0.0.0", opts[:port])
