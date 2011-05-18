@@ -27,12 +27,21 @@
         });
       });
 %body
-  %header
-    %h1 Graffiti
   %section#wrap.clearfix
+    %header
+      %h1 Graffiti
     %section#content.main
       %form{ :action => "/regex", :id => "regex_form", :method => "post" }
-        %input#regex{ :name => "regex", :size => "80", :type => "text", :placeholder => "insert your regex here" }
-        %textarea#subject{ :name => "subject", :cols => "60", :rows => "10" }
+        %fieldset
+          %label Regex (What you are searching for)
+          %input#regex{ :name => "regex", :size => "80", :type => "text", :placeholder => "insert your regex here" }
+          %label Subject (What you are matching against)
+          %textarea#subject{ :name => "subject", :cols => "60", :rows => "10" }
+        %h2 Result:
         #result
-
+    %footer
+      Graffiti is an open source project by
+      %a{:href => "https://twitter.com/martinisoft"} @martinisoft
+      |
+      Source code available on
+      %a{:href => "https://github.com/martinisoft/graffiti"} github

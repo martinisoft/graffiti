@@ -3,3 +3,43 @@ body {
   color: #000;
   background: #F0F0F0;
 }
+
+#wrap {
+  width: 600px;
+  margin: 20px auto;
+}
+
+header {
+  margin: 20px 0;
+
+  h1 {
+    font-size: 2.6em;
+    text-align: center;
+  }
+}
+
+fieldset input, fieldset textarea {
+  width: 100%;
+  margin: 5px 0;
+}
+
+fieldset label {
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+h2 {
+  font-size: 1.4em;
+}
+
+#result {
+  border: 1px solid #CCC;
+  padding: 20px;
+  background-color: #FFF;
+}
+
+footer {
+  margin-top: 10px;
+  font-size: 1.1em;
+  text-align: center;
+}
