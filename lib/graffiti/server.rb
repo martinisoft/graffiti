@@ -20,12 +20,17 @@ module Graffiti
 
     post '/regex' do
       if !request.params["regex"].empty?
-        pattern = Regexp.new(params["regex"])
-        matches = pattern.match(params["subject"])
-        if matches.nil?
+        # pattern = Regexp.new(params["regex"])
+        begin
+          pattern = Regexp.new(params["regex"])
+          matches = pattern.match(params["subject"])
+          if matches.nil?
+            "Nothing Matched"
+          else
+            matches.to_a
+          end
+        rescue RegexpError => error
           "Nothing Matched"
-        else
-          matches.to_a
         end
       end
     end
