@@ -1,65 +1,89 @@
-# graffiti
+graffiti
+========
 
-Regular Expressions are an artform.
+By Aaron Kalin
 
-## TL; DR
+Graffiti is a Regular Expression testing and learning tool. It creates a
+local web server you can interact with to test and explore Regular Expresison
+patterns.
 
-This app lets you test your Regular Expressions locally on a web page.
-
-## What the?
+Why?
+----
 
 Regular Expressions are the universal search language that crosses
 all language boundries. Most text editors, modern languages and
 even web sites support Regular Expressions.  Graffiti is intended
-to be a teaching aid and utility to help developers master this
-artform.
+to be a utility and teaching aid to help developers master this artform.
 
-## Install
+Install
+-------
 
 Simply type:
 
-<pre><code>
+```
 [sudo] gem install graffiti
-</code></pre>
+```
 
-sudo is optional (and you shouldn't anyway, especially if you use RVM)
+sudo is optional (and you shouldn't anyway, especially if you use [RVM](http://rvm.beginrescueend.com))
 
-## Dependencies
+Runtime Dependencies
+--------------------
 
-For advanced regex (Assertions, POSIX, etc) you'll need Ruby 1.9 or JRuby
+* Sinatra: Web application framework
+* Haml: HTML Template language
+* Sass: Stylesheet markup language (Specifically, SCSS)
+* Thin: Super fast web server
+* Trollop: Command line options for Ruby apps
 
-Advanced stuff on Rubinius/MRI 1.8.7 is coming in another version
+Development Dependencies
+------------------------
 
-## Usage
+* Rspec: Test Framework
+* Aruba: Test Framework for Command Line Applications
+* Shotgun: Reloads Sinatra server
+* Capybara: Test Matchers for Web Pages
+* Rake: Ruby Make, task runner for automated actions
+
+Usage
+-----
 
 Simply type:
 
-<pre><code>
+```
 graffiti
-</code></pre>
+```
 
 Then visit [http://localhost:8080/](http://localhost:8080/) and
 start messing with Regular Expressions.
 
 You can find some customization options by passing the -h option like so:
 
-<pre><code>
+```
 graffiti -h
-</code></pre>
+```
 
-## Contribute
+Contribute
+----------
 
-I love the github pull request system and so will you when contributing!
+I *love* the github pull request system and so will you when contributing!
 
 * Fork the repo
+* Make a topic branch
 * Make a patch (with tests please!)
 * Send a pull request
 
-Simple! If you need stuff to work on, check the "Issues" section of the
-github repo.  If its a new feature, make it awesome and I'll gladly accept
+If you need stuff to work on, check the "Issues" section of the
+github repo. If its a new feature, make it awesome and I'll gladly accept
 the patch.
 
-## Wish List
+Wish List
+---------
 
 I wanted to get this project out there and into everyone's hands
-so I get ideas on where to take this project.
+to get ideas on where to take this project.
+
+* POW Mode (If pow exists, offer to create a symlink to run it all the time?)
+* Better visual matching (Need better styling to display matches)
+* Cheat sheet (Help and information on basic/advanced matchers)
+* Sample regular expressions (To test)
+* Proxy Mode (Turn into a web proxy, do regex matches against incoming pages)
