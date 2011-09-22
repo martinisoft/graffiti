@@ -26,6 +26,16 @@ Simply type:
 
 sudo is optional (and you shouldn't anyway, especially if you use [RVM](http://rvm.beginrescueend.com))
 
+Required Ruby Version
+---------------------
+
+* MRI Ruby 1.9.2-p0 or newer
+* JRuby 1.6 or newer
+* Rubinius 1.2.x or newer
+
+If you would like MRI Ruby 1.8 support, feel free to send a pull request
+to make this work.
+
 Runtime Dependencies
 --------------------
 
