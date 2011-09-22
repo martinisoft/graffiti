@@ -7,6 +7,8 @@ Graffiti is a Regular Expression testing and learning tool. It creates a
 local web server you can interact with to test and explore Regular Expresison
 patterns.
 
+[![Build Status](http://travis-ci.org/martinisoft/graffiti.png)](http://travis-ci.org/martinisoft/graffiti)
+
 Why?
 ----
 
