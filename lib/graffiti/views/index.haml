@@ -1,12 +1,17 @@
 !!!
-/[if IE 7 ] <html lang="en" class="no-js ie7">
-/[if IE 8 ] <html lang="en" class="no-js ie8">
-/[if IE 9 ] <html lang="en" class="no-js ie9">
-<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
-%head
-  %meta{:charset => "utf-8"}
+/[if lt IE 7] <html class="no-js ie6 oldie" lang="en">
+/[if IE 7] <html class="no-js ie7 oldie" lang="en">
+/[if IE 8] <html class="no-js ie8 oldie" lang="en">
+/ [if gt IE 8]><!
+%html.no-js{:lang => "en"}
+  / <![endif]
+  %head
+    %meta{:charset => "utf-8"}
     %title Graffiti
+    %meta{:content => "Play with Regular Expressions the fun way!", :name => "description"}/
+    %meta{:content => "Aaron Kalin", :name => "author"}/
     %link{ :rel => "stylesheet", :href => "/graffiti.css" }
+    %meta{:content => "width=device-width,initial-scale=1", :name => "viewport"}/
     %script{ :type => "text/javascript", :src => "/jquery-1.6.1.min.js" }
     :javascript
       function check_regex() {
@@ -26,22 +31,22 @@
           check_regex();
         });
       });
-%body
-  %section#wrap.clearfix
-    %header
-      %h1 Graffiti
-    %section#content.main
-      %form{ :action => "/regex", :id => "regex_form", :method => "post" }
-        %fieldset
-          %label Regex (What you are searching for)
-          %input#regex{ :name => "regex", :size => "80", :type => "text", :placeholder => "insert your regex here" }
-          %label Subject (What you are matching against)
-          %textarea#subject{ :name => "subject", :cols => "60", :rows => "10" }
-        %h2 Result:
-        #result
-    %footer
-      Graffiti is an open source project by
-      %a{:href => "https://twitter.com/martinisoft"} @martinisoft
-      |
-      Source code available on
-      %a{:href => "https://github.com/martinisoft/graffiti"} github
+  %body
+    %section#wrap.clearfix
+      %header
+        %h1 Graffiti
+      %section#content.main
+        %form{ :action => "/regex", :id => "regex_form", :method => "post" }
+          %fieldset
+            %label Regex (What you are searching for)
+            %input#regex{ :name => "regex", :size => "80", :type => "text", :placeholder => "insert your regex here" }
+            %label Subject (What you are matching against)
+            %textarea#subject{ :name => "subject", :cols => "60", :rows => "10" }
+          %h2 Result:
+          #result
+      %footer
+        Graffiti is an open source project by
+        %a{:href => "https://twitter.com/martinisoft"} @martinisoft
+        |
+        Source code available on
+        %a{:href => "https://github.com/martinisoft/graffiti"} github
