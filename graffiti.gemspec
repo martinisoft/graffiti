@@ -16,7 +16,7 @@ Gem::Specification.new do |s|
   s.add_development_dependency "rspec", "2.6.0"
   s.add_development_dependency "aruba", "~> 0.4.6"
   s.add_development_dependency "shotgun", "0.9"
-  s.add_development_dependency "capybara", "0.4.1.2"
+  s.add_development_dependency "capybara", "~> 1.1.1"
   s.add_development_dependency "rake"
 
   s.add_dependency "sinatra", "1.2.6"
