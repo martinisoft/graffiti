@@ -37,7 +37,7 @@ def symlink_pow
   end
 end
 
-if opts[:link_pow] == true
+if opts[:link_pow]
   symlink_pow
 else
   Graffiti::Server.start("0.0.0.0", opts[:port])
