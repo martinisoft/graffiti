@@ -18,4 +18,21 @@ opts = Trollop::options do
   opt :port, "Port to bind to", :default => 8080
 end
 
+
+def symlink_pow?
+  pow = ENV['HOME'] + '/.pow'
+  puts project_root = File.expand_path(".")
+
+  if File.exists?(pow)
+    puts 'Would you like like to symlink pow?'
+    input = gets.chomp
+    if input == 'yes'
+      `ln -s #{project_root} #{pow}/graffiti`
+    end
+  end
+
+end
+
+symlink_pow?
+
 Graffiti::Server.start("0.0.0.0", opts[:port])
