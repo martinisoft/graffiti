@@ -16,23 +16,29 @@ opts = Trollop::options do
   EOS
 
   opt :port, "Port to bind to", :default => 8080
+  opt :link_pow, "Setup POW symlink?", :default => false
 end
 
 
-def symlink_pow?
+def symlink_pow
   pow = ENV['HOME'] + '/.pow'
-  puts project_root = File.expand_path(".")
-
+  project_root = File.expand_path(".")
   if File.exists?(pow)
-    puts 'Would you like like to symlink pow?'
-    input = gets.chomp
-    if input == 'yes'
-      `ln -s #{project_root} #{pow}/graffiti`
+    if File.exists?("#{pow}/graffiti")
+      puts "Symlink already exists"
+    else
+      `ln -s #{project_root} #{pow}/graffiti` if File.exists?(pow)
+      puts "Symlink created at #{pow}/graffiti"
     end
+    puts "Visit http://graffiti.dev in your browser"
+  else
+    puts "Can't find POW directory"
+    Graffiti::Server.start("0.0.0.0", opts[:port])
   end
-
 end
 
-symlink_pow?
-
-Graffiti::Server.start("0.0.0.0", opts[:port])
+if opts[:link_pow] == true
+  symlink_pow
+else
+  Graffiti::Server.start("0.0.0.0", opts[:port])
+end
