@@ -23,8 +23,6 @@ end
 def symlink_pow
   pow = ENV['HOME'] + '/.pow'
   project_root = File.expand_path(File.dirname(File.dirname(__FILE__)))
-  puts project_root
-  puts pow
   if File.exists?(pow)
     if File.exists?("#{pow}/graffiti")
       puts "Symlink already exists"
