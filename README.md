@@ -68,7 +68,13 @@ graffiti
 Then visit [http://localhost:8080/](http://localhost:8080/) and
 start messing with Regular Expressions.
 
-You can find some customization options by passing the -h option like so:
+If you have a ~/.pow directory, you can create a pow symlink by passing '-l':
+
+```
+graffiti -l
+```
+
+You can find other customization options by passing the -h option like so:
 
 ```
 graffiti -h
@@ -94,7 +100,6 @@ Wish List
 I wanted to get this project out there and into everyone's hands
 to get ideas on where to take this project.
 
-* POW Mode (If pow exists, offer to create a symlink to run it all the time?)
 * Better visual matching (Need better styling to display matches)
 * Cheat sheet (Help and information on basic/advanced matchers)
 * Sample regular expressions (To test)
