@@ -68,11 +68,14 @@ graffiti
 Then visit [http://localhost:8080/](http://localhost:8080/) and
 start messing with Regular Expressions.
 
-If you have a ~/.pow directory, you can create a pow symlink by passing '-l':
+If you use [POW](http://pow.cx/), you can symlink graffiti by passing the link option
 
 ```
 graffiti -l
 ```
+
+You can then visit [http://graffiti.dev](http://graffiti.dev) to use graffiti
+without having to run the command
 
 You can find other customization options by passing the -h option like so:
 
